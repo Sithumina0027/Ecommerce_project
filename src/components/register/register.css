@@ -1,0 +1,178 @@
+.register-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-container {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .register-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #000000;
+    position: relative;
+  }
+  
+  .register-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    color: #718096;
+    margin-bottom: 3rem;
+  }
+  
+  .register-title:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #1f8143;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+  
+  .register-form {
+    background-color: white;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+  
+  .form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2d3748;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(74, 108, 247, 0.2);
+    margin-bottom: 5px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .form-label {
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 1rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #1f8143;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.1);
+  }
+  
+  .error-message {
+    color: #e53e3e;
+    font-size: 0.85rem;
+    margin-top: 3px;
+  }
+  
+  .submit-button2 {
+    background-color: #1f8143;
+    color: white;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+    margin-top: 30px;
+    margin-left: 267.5px;
+  }
+  
+  .submit-button2:hover {
+    background-color: #175c30;
+    transform: translateY(-2px);
+  }
+  
+  .submit-button2:active {
+    transform: translateY(0);
+  }
+  
+ 
+  .required::after {
+    content: "*";
+    color: #e53e3e;
+    margin-left: 4px;
+  }
+  
+
+  
+  @media (max-width: 768px) {
+    .form-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+    
+    .register-section {
+      padding: 60px 0;
+    }
+    
+    .register-title {
+      font-size: 2rem;
+    }
+    
+    .register-form {
+      padding: 25px 20px;
+    }
+    
+    .submit-button {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .register-section {
+      padding: 40px 0;
+    }
+    
+    .register-title {
+      font-size: 1.8rem;
+    }
+    
+    .register-form {
+      padding: 20px 15px;
+    }
+    
+    .form-input {
+      padding: 12px 14px;
+    }
+  }

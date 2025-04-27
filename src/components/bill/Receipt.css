@@ -1,0 +1,158 @@
+/* Receipt.css */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+.receipt-container {
+  font-family: 'Roboto Mono', monospace;
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 14px;
+  position: relative;
+}
+
+.receipt-container::before,
+.receipt-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background-image: linear-gradient(
+    45deg,
+    transparent 33.333%,
+    #e5e7eb 33.333%,
+    #e5e7eb 66.667%,
+    transparent 66.667%
+  );
+  background-size: 16px 8px;
+}
+
+.receipt-container::before {
+  top: -8px;
+}
+
+.receipt-container::after {
+  bottom: -8px;
+}
+
+.receipt-header {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.receipt-subheader {
+  text-align: center;
+  color: #555;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.receipt-divider {
+  border: none;
+  border-top: 1px dashed #aaa;
+  margin: 12px 0;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 0;
+}
+
+.receipt-row-bold {
+  font-weight: bold;
+}
+
+.receipt-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.receipt-barcode {
+  height: 32px;
+  width: 100%;
+  background: repeating-linear-gradient(
+    to right,
+    #000,
+    #000 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  margin: 10px 0;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.receipt-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.receipt-button:hover {
+  transform: translateY(-2px);
+}
+
+.receipt-button:active {
+  transform: translateY(0);
+}
+
+.back {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.back:hover {
+  background-color: #e5e7eb;
+}
+
+.pay {
+  background-color: #1f8143;
+  color: white;
+}
+
+.pay:hover {
+  background-color: #1f8143;
+}
+
+
+
+
+
+
+.receipt-row span:first-child {
+  max-width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Print styles */
+@media print {
+  .button-group {
+    display: none;
+  }
+  
+  .receipt-container {
+    box-shadow: none;
+    border: none;
+  }
+  
+  .receipt-container::before,
+  .receipt-container::after {
+    display: none;
+  }
+}

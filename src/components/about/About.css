@@ -1,0 +1,146 @@
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.about-title {
+  color:linear-gradient(135deg, #549839, #2d6a4f);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.about-title:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #1f8143;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.about-section-title {
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-bottom: 16px;
+}
+
+.about-values {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.about-values li {
+  background-color: #f0fdf4;
+  border-left: 4px solid#1f8143;
+  padding: 12px 16px;
+  font-weight: 500;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-values li:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-title {
+    font-size: 2rem;
+  }
+  
+  .about-section-title {
+    font-size: 1.5rem;
+  }
+  
+  .about-values {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+
+
+.about-images {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  padding: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 300px; 
+}
+
+.about-images img {
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.about-images img:first-child {
+  flex: 2; 
+}
+
+
+.about-images img:nth-child(2) {
+  flex: 1; 
+}
+
+
+.about-images img:last-child {
+  flex: 3; 
+}
+
+.about-images img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+@media (max-width: 768px) {
+  .about-images {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+  }
+  
+  .about-images img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+  }
+  
+  .about-images img:first-child,
+  .about-images img:nth-child(2),
+  .about-images img:last-child {
+    flex: none;
+  }
+}

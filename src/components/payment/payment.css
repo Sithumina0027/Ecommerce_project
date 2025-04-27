@@ -1,0 +1,192 @@
+.payment-container {
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3%;
+  }
+  
+  .payment-card {
+    max-width: 25rem;
+    width: 30%;
+  }
+  
+ 
+  
+
+  .form-container {
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border-radius: 1rem;
+    overflow: hidden;
+   
+  }
+  
+  
+  
+  .form-header {
+    background-image: linear-gradient(to right, #1f8143, #1f8143);
+    padding: 1rem;
+  }
+  
+  .header-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+  }
+  
+  .header-subtitle {
+    color: #bfdbfe;
+    text-align: center;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  
+
+  .payment-form {
+    padding: 1.5rem;
+  }
+  
+  .input-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-label svg {
+    width: 1rem;
+    height: 1rem;
+    color: #6b7280;
+    margin-right: 0.5rem;
+  }
+  
+  .card-type-badge {
+    margin-left: 0.5rem;
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-size: 0.75rem;
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+  
+  .form-input {
+    width: 100%;
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 0.2s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
+  }
+  
+  .row {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .col-half {
+    width: 50%;
+  }
+  
+  
+  
+  .submit-button {
+    width: 100%;
+    background-color: #1f8143;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    border: none;
+    margin-top: 1rem;
+    margin-left:3%;
+  }
+  
+  .submit-button:hover:not(:disabled) {
+    background-color: #175c30;
+  }
+  
+  .submit-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+ 
+  
+  .security-note {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    margin-top: 1rem;
+  }
+  
+  
+  
+  .cards-accepted {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .card-badge {
+    background-color: #e5e7eb;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .card-badge-text {
+    font-size: 0.75rem;
+    color: #4b5563;
+  }
+  
+ 
+  
+  .form-input::placeholder {
+    color: #9ca3af;
+  }
+  
+  
+  
+  .input-group:focus-within .form-label {
+    color: #2563eb;
+  }

@@ -1,0 +1,124 @@
+/* Header.css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.auth-links {
+  display: flex;
+  gap: 20px;
+  order: 2; 
+  margin-right: -36px;
+}
+
+.auth-links a {
+  text-decoration: none;
+  color: #549839;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 780;
+  padding: 8px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-links a:first-child {
+  background-color: transparent;
+  border: 2px solid #549839;
+  box-shadow: 0 4px 6px rgba(84, 152, 57, 0.1);
+}
+
+.auth-links a:first-child:hover {
+  background-color: rgba(84, 152, 57, 0.05);
+}
+
+.auth-links a:last-child {
+  background: linear-gradient(135deg, #549839, #2d6a4f);
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(84, 152, 57, 0.2);
+}
+
+.auth-links a:last-child:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0) 100%);
+  transition: left 0.7s ease;
+}
+
+.auth-links a:last-child:hover:before {
+  left: 100%;
+}
+
+.auth-links a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(84, 152, 57, 0.15);
+}
+
+.auth-links a:active {
+  transform: translateY(1px);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  order: 1; 
+}
+
+.logout-button {
+  background: none;
+  border: none;
+  color: #975555;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 15px;
+  text-decoration: underline;
+}
+
+
+.market-logo {
+  max-height: 50px; 
+  width: auto;
+  border-radius: 2px; 
+ 
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .nav-right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px; 
+    order: 1; 
+  }
+
+  .auth-links {
+    width: 100%;
+    justify-content: center;
+    order: 2; 
+  }
+}
